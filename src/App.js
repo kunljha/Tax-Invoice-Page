@@ -1,4 +1,5 @@
 import upload from './assets/upload.jpg'
+import { ReactComponent as PlusCircle } from './assets/plus-circle.svg'
 
 const App = () => {
   return (
@@ -42,7 +43,7 @@ const App = () => {
       </form>
 
       {/* Billing and Invoice */}
-      <div className='flex-container'>
+      <div className='grid-container'>
         <div className='billing'>
           <h5>Bill To:</h5>
           <form className='form'>
@@ -95,6 +96,72 @@ const App = () => {
           <option value='state2'>State 2</option>
           <option value='state3'>State 3</option>
         </select>
+      </div>
+
+      {/* Item Table Columns */}
+      <div className='table-cols'>
+        <h5>Item Description</h5>
+        <h5>Qty</h5>
+        <h5>Rate</h5>
+        <h5>SGST</h5>
+        <h5>CGST</h5>
+        <h5>Cess</h5>
+        <h5>Amount</h5>
+      </div>
+
+      {/* Item Table Row */}
+      <div className='table-row'>
+        <div>
+          <textarea placeholder='Enter item name/description'></textarea>
+          <input type='text' placeholder='HSN/SAC' />
+        </div>
+        <div>
+          <input type='number' />
+        </div>
+        <div>
+          <input type='text' placeholder='0.00' />
+        </div>
+        <div>
+          <input type='number' />
+          <p>0.00</p>
+        </div>
+        <div>
+          <input type='number' />
+          <p>0.00</p>
+        </div>
+        <div>
+          <input type='number' />
+          <p>0.00</p>
+        </div>
+        <div>
+          <p className='table-row__wt'>200</p>
+        </div>
+      </div>
+
+      {/* Add Line Item and Total */}
+      <div className='flex-container'>
+        <div className='add-item'>
+          <PlusCircle />
+          <h5>Add Line Item</h5>
+        </div>
+        <div className='total'>
+          <div className='total--item'>
+            <h5 className='total--item__wt'>Sub Total</h5>
+            <h5>200.00</h5>
+          </div>
+          <div className='total--item'>
+            <h5 className='total--item__wt'>SGST (6%)</h5>
+            <h5>12.00</h5>
+          </div>
+          <div className='total--item'>
+            <h5 className='total--item__wt'>CGST (6%)</h5>
+            <h5>12.00</h5>
+          </div>
+          <div className='total--item total--item__bold'>
+            <h5 className='total--item__wt'>Total</h5>
+            <h5>224.00</h5>
+          </div>
+        </div>
       </div>
 
       {/* Notes */}

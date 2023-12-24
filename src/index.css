@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
@@ -101,7 +99,7 @@ img {
 }
 
 /* Billing and Invoice stying */
-.flex-container {
+.grid-container {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-auto-rows: max-content;
@@ -120,9 +118,11 @@ img {
 
 .invoice--control {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.5fr;
   grid-auto-rows: max-content;
   gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .invoice--control h5 {
@@ -133,7 +133,7 @@ img {
 
 .invoice--control input {
   min-width: 100%;
-  height: 3.2rem;
+  height: 2.8rem;
   padding: 0.5rem;
   outline: none;
   border: 2px solid transparent;
@@ -171,9 +171,123 @@ img {
   border-radius: 0.4rem;
 }
 
+/* Item Table Columns styling */
+.table-cols {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: max-content;
+  gap: 1rem;
+  color: #fafafa;
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Item Table Row styling */
+.table-row {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: max-content;
+  border-bottom: 1.5px solid #d7d5d5d5;
+  padding: 0.5rem;
+}
+
+.table-row textarea {
+  width: 80%;
+  height: 6rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+  resize: vertical;
+}
+
+.table-row textarea:hover,
+.table-row textarea:focus {
+  border: 2px solid #98b3de;
+  border-radius: 0.4rem;
+}
+
+.table-row input {
+  width: 70%;
+  height: 2.8rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+}
+
+.table-row input:hover,
+.table-row input:focus {
+  border: 2px solid #98b3de;
+  border-radius: 0.4rem;
+}
+
+.table-row p {
+  width: 70%;
+  font-weight: 400;
+  color: #777991;
+  text-align: center;
+}
+
+.table-row .table-row__wt {
+  color: #333;
+}
+
+
+/* Add Line Item and Total Styling */
+.flex-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* min-height: 100%; */
+}
+
+.add-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-item h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #408DFB;
+  margin-left: 1rem;
+}
+
+.total {
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.total--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25%;
+  width: 100%;
+  /* height: 4.2rem;
+  width: 38rem; */
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #555555;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.total--item__wt {
+  font-weight: 500;
+}
+
+.total--item__bold {
+  background-color: #F9F9FB;
+}
+
 /* Textarea styling */
 .text-area {
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 
 .text-area h5 {
@@ -198,5 +312,4 @@ img {
   border: 2px solid #98b3de;
   border-radius: 0.4rem;
 }
-
 
