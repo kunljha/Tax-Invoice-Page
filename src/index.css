@@ -234,6 +234,16 @@ img {
   color: #333;
 }
 
+.table-row .table-row__delete {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.table-row .table-row__delete div {
+  cursor: pointer;
+}
+
 
 /* Add Line Item and Total Styling */
 .flex-container {

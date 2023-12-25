@@ -41,6 +41,11 @@ const App = () => {
     setItems(items.map((item) => (item.id === id ? newItem : item)))
   }
 
+  // delete a item
+  const deleteItem = (id) => {
+    setItems(items.filter((item) => item.id !== id))
+  }
+
   return (
     <div className='App'>
       <Header />
@@ -48,7 +53,11 @@ const App = () => {
       <BillInvoice />
       <PlaceOfSupply />
       <ItemTableCols />
-      <ItemsList items={items} updateItem={updateItem} />
+      <ItemsList
+        items={items}
+        updateItem={updateItem}
+        deleteItem={deleteItem}
+      />
       <LineItemAndTotal addItem={addItem} items={items} />
       <Notes />
       <TermsAndConditions />

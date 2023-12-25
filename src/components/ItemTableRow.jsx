@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { ReactComponent as XCircle } from '../assets/x-circle.svg'
 
-const ItemTableRow = ({ item, updateItem }) => {
+const ItemTableRow = ({ item, updateItem, deleteItem }) => {
   const [desc, setDesc] = useState(item.desc)
   const [hsn, setHsn] = useState(item.hsn)
   const [qty, setQty] = useState(item.qty)
@@ -186,8 +187,11 @@ const ItemTableRow = ({ item, updateItem }) => {
         />
         <p>{qty * cess}</p>
       </div>
-      <div>
+      <div className='table-row__delete'>
         <p className='table-row__wt'>{qty * rate}</p>
+        <div onClick={() => deleteItem(item.id)}>
+          <XCircle />
+        </div>
       </div>
     </div>
   )
