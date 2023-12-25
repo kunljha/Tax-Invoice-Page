@@ -248,6 +248,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .add-item h5 {
