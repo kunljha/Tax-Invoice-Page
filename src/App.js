@@ -36,6 +36,11 @@ const App = () => {
     setItems([...items, item])
   }
 
+  // update a item
+  const updateItem = (id, newItem) => {
+    setItems(items.map((item) => (item.id === id ? newItem : item)))
+  }
+
   return (
     <div className='App'>
       <Header />
@@ -43,8 +48,8 @@ const App = () => {
       <BillInvoice />
       <PlaceOfSupply />
       <ItemTableCols />
-      <ItemsList items={items} />
-      <LineItemAndTotal addItem={addItem} />
+      <ItemsList items={items} updateItem={updateItem} />
+      <LineItemAndTotal addItem={addItem} items={items} />
       <Notes />
       <TermsAndConditions />
     </div>

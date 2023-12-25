@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const ItemTableRow = ({ item }) => {
+const ItemTableRow = ({ item, updateItem }) => {
   const [desc, setDesc] = useState(item.desc)
   const [hsn, setHsn] = useState(item.hsn)
   const [qty, setQty] = useState(item.qty)
@@ -11,30 +11,121 @@ const ItemTableRow = ({ item }) => {
 
   const handleDescChange = (e) => {
     setDesc(e.target.value)
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleHsnChange = (e) => {
     setHsn(e.target.value)
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleQtyChange = (e) => {
     setQty(Number(e.target.value))
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleRateChange = (e) => {
     setRate(Number(e.target.value))
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleSgstChange = (e) => {
     setSgst(Number(e.target.value))
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleCgstChange = (e) => {
     setCgst(Number(e.target.value))
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   const handleCessChange = (e) => {
     setCess(Number(e.target.value))
+
+    const newItem = {
+      id: item.id,
+      desc,
+      hsn,
+      qty,
+      rate,
+      sgst,
+      cgst,
+      cess,
+      amount: qty * rate,
+    }
+    updateItem(item.id, newItem)
   }
 
   return (
