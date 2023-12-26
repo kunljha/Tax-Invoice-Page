@@ -324,3 +324,68 @@ img {
   border-radius: 0.4rem;
 }
 
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .App {
+    max-width: 92vw;
+    margin: 1.8rem auto;
+    padding: 1rem 2rem;
+  }
+
+  .header--image {
+    width: 30%;
+  }
+
+  .header--text h5 {
+    font-size: 1rem; 
+  }
+
+  .header--text p {
+    font-size: 0.6rem;
+    margin-left: 1.6rem;
+  }
+
+  .header h1 {
+    font-size: 2.4rem;
+    margin: 0 1rem;
+  }
+
+  .form {
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .grid-container {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .billing .form {
+    margin-top: 0rem;
+    min-width: 100%;
+  }
+
+  .place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+
+  .place select {
+    width: 60%;
+    margin-right: 1rem;
+  }
+
+  .table-cols {
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .total {
+    flex-basis: 60%;
+  }
+
+}
