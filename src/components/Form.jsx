@@ -1,4 +1,17 @@
-const Form = () => {
+import { useState } from 'react'
+
+const Form = ({ countries }) => {
+  const [selectedCountry, setSelectedCountry] = useState('Country')
+  const [selectedState, setSelectedState] = useState('')
+
+  const handleCountryChange = (e) => {
+    setSelectedCountry(e.target.value)
+  }
+
+  const handleStateChange = (e) => {
+    setSelectedState(e.target.value)
+  }
+
   return (
     <form className='form'>
       <input type='text' placeholder='Your Company' required />
@@ -6,21 +19,27 @@ const Form = () => {
       <input type='text' placeholder='Company GSTIN' required />
       <input type='text' placeholder='Company Address' required />
       <input type='text' placeholder='City' required />
-      <select>
-        <option disabled selected>
-          State
-        </option>
-        <option value='state1'>State 1</option>
-        <option value='state2'>State 2</option>
-        <option value='state3'>State 3</option>
-      </select>
-      <select>
+      <select value={selectedCountry} onChange={handleCountryChange}>
         <option disabled selected>
           Country
         </option>
-        <option value='country1'>Country 1</option>
-        <option value='country2'>Country 2</option>
-        <option value='country3'>Country 3</option>
+        {countries.map((country, index) => (
+          <option key={index} value={country.name}>
+            {country.name}
+          </option>
+        ))}
+      </select>
+      <select value={selectedState} onChange={handleStateChange}>
+        <option disabled selected>
+          State
+        </option>
+        {countries
+          .find((country) => country.name === selectedCountry)
+          ?.states.map((state, index) => (
+            <option key={index} value={state}>
+              {state}
+            </option>
+          ))}
       </select>
     </form>
   )

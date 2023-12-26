@@ -7,6 +7,7 @@ import ItemsList from './components/ItemsList'
 import LineItemAndTotal from './components/LineItemAndTotal'
 import Notes from './components/Notes'
 import TermsAndConditions from './components/TermsAndConditions'
+import countries from './dummyData'
 import { useState } from 'react'
 
 const App = () => {
@@ -49,8 +50,8 @@ const App = () => {
   return (
     <div className='App'>
       <Header />
-      <Form />
-      <BillInvoice />
+      <Form countries={countries} />
+      <BillInvoice countries={countries} />
       <PlaceOfSupply />
       <ItemTableCols />
       <ItemsList
