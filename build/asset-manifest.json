@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Tax-Invoice-Page/static/css/main.13041dea.css",
+    "main.js": "/Tax-Invoice-Page/static/js/main.c347ec75.js",
+    "static/js/787.43b733dd.chunk.js": "/Tax-Invoice-Page/static/js/787.43b733dd.chunk.js",
+    "index.html": "/Tax-Invoice-Page/index.html",
+    "static/media/plus-circle.svg": "/Tax-Invoice-Page/static/media/plus-circle.ffc424da2e22cef99bb4290febdab0bf.svg",
+    "static/media/x-circle.svg": "/Tax-Invoice-Page/static/media/x-circle.d4e77dba04615e9b122b0e26bd354b9d.svg",
+    "main.13041dea.css.map": "/Tax-Invoice-Page/static/css/main.13041dea.css.map",
+    "main.c347ec75.js.map": "/Tax-Invoice-Page/static/js/main.c347ec75.js.map",
+    "787.43b733dd.chunk.js.map": "/Tax-Invoice-Page/static/js/787.43b733dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13041dea.css",
+    "static/js/main.c347ec75.js"
+  ]
+}
