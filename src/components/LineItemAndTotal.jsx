@@ -7,10 +7,12 @@ const LineItemAndTotal = ({ addItem, items }) => {
   let subTotal = 0
 
   for (let i = 0; i < items.length; ++i) {
-    sgstTotal += items[i].sgst * items[i].qty
-    cgstTotal += items[i].cgst * items[i].qty
-    cessTotal += items[i].cess * items[i].qty
-    subTotal += items[i].rate * items[i].qty
+    const { qty, rate, sgst, cgst, cess, amount } = items[i]
+
+    sgstTotal += qty * (sgst / 100) * rate
+    cgstTotal += qty * (cgst / 100) * rate
+    cessTotal += qty * (cess / 100) * rate
+    subTotal += amount
   }
 
   return (
@@ -22,23 +24,23 @@ const LineItemAndTotal = ({ addItem, items }) => {
       <div className='total'>
         <div className='total--item'>
           <h5 className='total--item__wt'>Sub Total</h5>
-          <h5>{subTotal}</h5>
+          <h5>{subTotal.toFixed(2)}</h5>
         </div>
         <div className='total--item'>
           <h5 className='total--item__wt'>SGST</h5>
-          <h5>{sgstTotal}</h5>
+          <h5>{sgstTotal.toFixed(2)}</h5>
         </div>
         <div className='total--item'>
           <h5 className='total--item__wt'>CGST</h5>
-          <h5>{cgstTotal}</h5>
+          <h5>{cgstTotal.toFixed(2)}</h5>
         </div>
         <div className='total--item'>
           <h5 className='total--item__wt'>Cess</h5>
-          <h5>{cessTotal}</h5>
+          <h5>{cessTotal.toFixed(2)}</h5>
         </div>
         <div className='total--item total--item__bold'>
           <h5 className='total--item__wt'>Total</h5>
-          <h5>{subTotal + sgstTotal + cgstTotal + cessTotal}</h5>
+          <h5>{(subTotal + sgstTotal + cgstTotal + cessTotal).toFixed(2)}</h5>
         </div>
       </div>
     </div>
